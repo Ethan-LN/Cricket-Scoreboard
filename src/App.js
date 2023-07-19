@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { TeamScore } from "./components/TeamScore";
 
 function App() {
   return (
     <div className="App">
-      <p>Template for React App</p>
+      <TeamScore />
     </div>
   );
 }
