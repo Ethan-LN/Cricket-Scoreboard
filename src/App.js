@@ -1,10 +1,10 @@
 import "./App.css";
-import { TeamScore } from "./components/TeamScore";
+import { Scoreboard } from "./components/Scoreboard";
 
 function App() {
   return (
     <div className="App">
-      <TeamScore />
+      <Scoreboard />
     </div>
   );
 }
