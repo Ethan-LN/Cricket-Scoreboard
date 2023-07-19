@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import GameBoard from "./components/GameBoard";
 
 function App() {
   return (
     <div className="App">
-      <p>Template for React App</p>
+      <GameBoard />
     </div>
   );
 }
