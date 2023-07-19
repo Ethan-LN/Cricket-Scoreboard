@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TeamScore } from "./TeamScore";
 import "../styles/Scoreboard.css";
 
-export const Scoreboard = () => {
+export const Scoreboard = (props) => {
   const [teamOneName, setTeamOneName] = useState("");
   const [teamTwoName, setTeamTwoName] = useState("");
 
@@ -15,24 +15,27 @@ export const Scoreboard = () => {
   };
 
   return (
-    <div className="scoreboard">
-      <div>
-        <h2>Team 1</h2>
-        <input
-          type="text"
-          value={teamOneName}
-          onChange={handleTeam1InputChange}
-        />
-        <TeamScore teamName={teamOneName} />
-      </div>
-      <div>
-        <h2>Team 2</h2>
-        <input
-          type="text"
-          value={teamTwoName}
-          onChange={handleTeam2InputChange}
-        />
-        <TeamScore teamName={teamTwoName} />
+    <div>
+      <h1>Game {props.gameNumber}</h1>
+      <div className="scoreboard">
+        <div>
+          <h3>Enter Your Team Name</h3>
+          <input
+            type="text"
+            value={teamOneName}
+            onChange={handleTeam1InputChange}
+          />
+          <TeamScore teamName={teamOneName} />
+        </div>
+        <div>
+          <h3>Enter Your Team Name</h3>
+          <input
+            type="text"
+            value={teamTwoName}
+            onChange={handleTeam2InputChange}
+          />
+          <TeamScore teamName={teamTwoName} />
+        </div>
       </div>
     </div>
   );

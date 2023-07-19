@@ -1,10 +1,10 @@
 import "./App.css";
-import { Scoreboard } from "./components/Scoreboard";
+import GameBoard from "./components/GameBoard";
 
 function App() {
   return (
     <div className="App">
-      <Scoreboard />
+      <GameBoard />
     </div>
   );
 }
